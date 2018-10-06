@@ -1,4 +1,4 @@
-# fsociety by thomas1o#8211
+# fsociety v1.0 by thomas1o#8211
 
 import discord
 from discord.ext import commands
