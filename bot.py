@@ -1,10 +1,11 @@
-# fsociety v1.0 by thomas1o#8211
+# fsociety by thomas1o#8211
 
 import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
-
+import time
+import os
 
 bot = commands.Bot(command_prefix='')
 
@@ -57,4 +58,4 @@ async def embed(ctx):
     embed.add_field(name="This is a field", value="no it isn't", inline=True)
     await bot.say(embed=embed)
 
-bot.run('TOKEN')
+bot.run(os.getenv('TOKEN'))
