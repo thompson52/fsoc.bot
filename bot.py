@@ -57,4 +57,4 @@ async def embed(ctx):
     embed.add_field(name="This is a field", value="no it isn't", inline=True)
     await bot.say(embed=embed)
 
-bot.run(os.getenv('TOKEN'))
+bot.run('TOKEN')
