@@ -35,8 +35,7 @@ async def info(ctx, user: discord.Member):
 
 @bot.command(pass_context=True)
 async def serverinfo(ctx):
-    embed = discord.Embed(name="{}'s info".format(ctx.message.server.name), description="Here's what I could find.", color=0x00ff00)
-    embed.set_author(name="thomas1o")
+    embed = discord.Embed(name="{}'s info".format(ctx.message.server.name), description="ACCESS GRANTED", color=0x00ff00)
     embed.add_field(name="Name", value=ctx.message.server.name, inline=True)
     embed.add_field(name="ID", value=ctx.message.server.id, inline=True)
     embed.add_field(name="Roles", value=len(ctx.message.server.roles), inline=True)
@@ -51,11 +50,11 @@ async def kick(ctx, user: discord.Member):
     await bot.kick(user)
 
 @bot.command(pass_context=True)
-async def embed(ctx):
-    embed = discord.Embed(title="test", description="my name jeff", color=0x00ff00)
-    embed.set_footer(text="this is a footer")
-    embed.set_author(name="thomas1o")
-    embed.add_field(name="This is a field", value="no it isn't", inline=True)
+async def botinfo(ctx):
+    embed = discord.Embed(title="Made with:", description="Python 3.7", color=0x00ff00)
+    embed.set_footer(text="$--------$")
+    embed.set_author(name="fsociety v.1.0 by thomas1o")
+    embed.add_field(name="Powered by", value="Heroku", inline=True)
     await bot.say(embed=embed)
 
 bot.run(os.getenv('TOKEN'))
