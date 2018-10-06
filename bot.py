@@ -54,7 +54,7 @@ async def kick(ctx, user: discord.Member):
 async def embed(ctx):
     embed = discord.Embed(title="test", description="my name jeff", color=0x00ff00)
     embed.set_footer(text="this is a footer")
-    embed.set_author(name=thomas1o")
+    embed.set_author(name="thomas1o")
     embed.add_field(name="This is a field", value="no it isn't", inline=True)
     await bot.say(embed=embed)
 
