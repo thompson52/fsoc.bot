@@ -4,6 +4,7 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
+import chalk
 import os
 
 bot = commands.Bot(command_prefix='')
@@ -57,4 +58,4 @@ async def embed(ctx):
     embed.add_field(name="This is a field", value="no it isn't", inline=True)
     await bot.say(embed=embed)
 
-bot.run('TOKEN')
+bot.run(os.getenv('TOKEN'))
